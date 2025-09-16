@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "teacher_name": "Иванов И.И.",
+        "group_name": "Хор \"Радуга\"",
+        "monday": "9:00-10:30",
+        "tuesday": "-",
+        "wednesday": "9:00-10:30",
+        "thursday": "-",
+        "friday": "9:00-10:30",
+        "saturday": "10:00-11:30",
+        "sunday": "-"
+    },
+    {
+        "id": 2,
+        "teacher_name": "Петрова А.С.",
+        "group_name": "Танцы \"Звездочки\"",
+        "monday": "-",
+        "tuesday": "15:00-16:30",
+        "wednesday": "-",
+        "thursday": "15:00-16:30",
+        "friday": "-",
+        "saturday": "14:00-15:30",
+        "sunday": "-"
+    },
+    {
+        "id": 3,
+        "teacher_name": "Сидоров П.П.",
+        "group_name": "Театр \"Маска\"",
+        "monday": "11:00-12:30",
+        "tuesday": "11:00-12:30",
+        "wednesday": "-",
+        "thursday": "11:00-12:30",
+        "friday": "11:00-12:30",
+        "saturday": "-",
+        "sunday": "16:00-17:30"
+    },
+    {
+        "id": 4,
+        "teacher_name": "test",
+        "group_name": "test",
+        "monday": "123",
+        "tuesday": "123",
+        "wednesday": "123",
+        "thursday": "123",
+        "friday": "123",
+        "saturday": "123",
+        "sunday": "123"
+    },
+    {
+        "id": 5,
+        "teacher_name": "фыв",
+        "group_name": "фыв",
+        "monday": "фыв",
+        "tuesday": "",
+        "wednesday": "",
+        "thursday": "",
+        "friday": "",
+        "saturday": "",
+        "sunday": ""
+    }
+]

@@ -1,0 +1,901 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font: bold 16px/1.5 sans-serif; */
+        /* font: bold 16px/1.5 italic cursive; */
+
+}
+
+
+body {
+    /* background-image: url(/html/css/img/ночное-небо.jpg); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #86a7d8 0%, #78aafa 100%);
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    /* background-color: #3498db; */
+    min-height: 100vh;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+
+h1 {
+    font: bold 3rem/1.5 italic cursive;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table thead {
+    background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table thead::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: -webkit-linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table th {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table th:first-child {
+    background: rgba(255,255,255,0.1);
+}
+
+.schedule-table th:nth-child(2) {
+    background: rgba(255,255,255,0.05);
+}
+
+.schedule-table td {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table tbody tr {
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table tbody tr:hover {
+    background: -webkit-linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.schedule-table tbody tr:nth-child(even):hover {
+    background: -webkit-linear-gradient(135deg, #f0f4ff 0%, #e0ebff 100%);
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0ebff 100%);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Стили для первых двух колонок */
+.schedule-table .teacher-cell {
+    font-weight: 600;
+    color: #2c3e50;
+    font-style: normal;
+    background: linear-gradient(135deg, #fefefe 0%, #fdfdfd 50%, #fcfcfc 100%);
+    cursor: pointer;
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid rgba(25, 118, 210, 0.12);
+    box-shadow: 0 2px 6px rgba(25, 118, 210, 0.06);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-table .teacher-cell::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #1976d2, transparent);
+    opacity: 0.5;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(25, 118, 210, 0.2);
+}
+
+.schedule-table .teacher-cell:hover {
+    background: linear-gradient(135deg, #fafbff 0%, #f5f7ff 50%, #f0f4ff 100%);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.1), 0 0 8px rgba(25, 118, 210, 0.15);
+    color: #1565c0;
+    border: 1px solid rgba(25, 118, 210, 0.2);
+    border-radius: 14px;
+}
+
+.schedule-table .teacher-cell:hover::after {
+    opacity: 0.7;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+.schedule-table .teacher-cell:active {
+    transform: translateY(-1px) scale(0.99);
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15), 0 0 6px rgba(25, 118, 210, 0.2);
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 13px;
+}
+
+.schedule-table .group-cell {
+    font-weight: 600;
+    color: #2c3e50;
+    font-style: normal;
+    background: linear-gradient(135deg, #fefefe 0%, #fdfdfd 50%, #fcfcfc 100%);
+    cursor: pointer;
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid rgba(123, 31, 162, 0.12);
+    box-shadow: 0 2px 6px rgba(123, 31, 162, 0.06);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-table .group-cell::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #7b1fa2, transparent);
+    opacity: 0.5;
+    border-radius: 2px;
+    box-shadow: 0 0 3px rgba(123, 31, 162, 0.2);
+}
+
+.schedule-table .group-cell:hover {
+    background: linear-gradient(135deg, #fbf7ff 0%, #f8f0ff 50%, #f5ebff 100%);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 12px rgba(123, 31, 162, 0.1), 0 0 8px rgba(123, 31, 162, 0.15);
+    color: #6a1b9a;
+    border: 1px solid rgba(123, 31, 162, 0.2);
+    border-radius: 14px;
+}
+
+.schedule-table .group-cell:hover::before {
+    opacity: 0.7;
+    box-shadow: 0 0 5px rgba(123, 31, 162, 0.3);
+}
+
+.schedule-table .group-cell:active {
+    transform: translateY(-1px) scale(0.99);
+    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.15), 0 0 6px rgba(123, 31, 162, 0.2);
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 13px;
+}
+
+/* Стили для дней недели */
+.schedule-table td:not(:first-child):not(:nth-child(2)) {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    font-weight: 400;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Стили для пустых ячеек */
+.schedule-table td:not(:first-child):not(:nth-child(2)):contains('-') {
+    color: #ccc;
+    font-size: 1rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Цветовое кодирование дней недели */
+.schedule-table th:nth-child(3) { background-color: rgba(255, 107, 107, 0.2); } /* Пн - красный */
+.schedule-table th:nth-child(4) { background-color: rgba(255, 202, 87, 0.2); }  /* Вт - оранжевый */
+.schedule-table th:nth-child(5) { background-color: rgba(255, 235, 59, 0.2); }  /* Ср - желтый */
+.schedule-table th:nth-child(6) { background-color: rgba(150, 206, 180, 0.2); } /* Чт - зеленый */
+.schedule-table th:nth-child(7) { background-color: rgba(69, 183, 209, 0.2); }  /* Пт - голубой */
+.schedule-table th:nth-child(8) { background-color: rgba(142, 68, 173, 0.2); }  /* Сб - фиолетовый */
+.schedule-table th:nth-child(9) { background-color: rgba(255, 138, 128, 0.2); } /* Вс - розовый */
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .schedule-table {
+        font-size: 0.9rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 1rem 0.8rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    .schedule-table {
+        font-size: 0.8rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.8rem 0.5rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 600px) {
+    .schedule-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 10px;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        min-width: 100px;
+        padding: 0.7rem 0.4rem;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Стили для таблицы расписания */
+
+/* Анимация загрузки */
+.schedule-table {
+    animation: fadeInUp 0.6s ease-out;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* Добавьте эти стили к существующему CSS */
+
+.current-info {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.current-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.current-time {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.current-time.updating {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #ffeb3b;
+    text-shadow: 0 0 10px rgba(255,235,59,0.5);
+}
+
+.current-day {
+    background: rgba(255,255,255,0.15);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.current-day.updating {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.25);
+}
+
+/* Индикатор обновления */
+.current-info::after {
+    content: '●';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #4caf50;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.current-info.updating::after {
+    opacity: 1;
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Выделение текущего дня в таблице */
+.current-day-column {
+    background: rgba(255,255,255,0.3) !important;
+    position: relative;
+}
+
+.current-day-column::after {
+    content: '●';
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #ffeb3b;
+    font-size: 0.8rem;
+    text-shadow: 0 0 5px rgba(255,235,59,0.8);
+}
+
+.current-day-cell {
+    /* font: 100%/1.2 'Courier New', monospace; */
+    background: -webkit-linear-gradient(135deg, rgba(255,235,59,0.1) 0%, rgba(255,193,7,0.1) 100%) !important;
+    background: linear-gradient(135deg, rgba(255,235,59,0.1) 0%, rgba(255,193,7,0.1) 100%) !important;
+    border-left: 3px solid #ffeb3b;
+    font-weight: 300;
+    position: relative;
+}
+
+.current-day-cell:not(:first-child):not(:nth-child(2)) {
+    color: #f57f17;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .current-info {
+        gap: 1rem;
+    }
+    
+    .date-time,
+    .current-day {
+        padding: 0.6rem 1rem;
+    }
+    
+    .current-time {
+        font-size: 1.2rem;
+    }
+    
+    .current-day {
+        font-size: 1.1rem;
+    }
+}
+
+/* Добавьте эти стили к существующему CSS */
+
+.current-time {
+    transition: all 0.3s ease;
+}
+
+.current-time.updating {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #ffeb3b;
+    text-shadow: 0 0 10px rgba(255,235,59,0.5);
+}
+
+.current-day {
+    transition: all 0.3s ease;
+}
+
+.current-day.updating {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.25);
+}
+
+/* Индикатор обновления */
+.current-info::after {
+    content: '●';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #4caf50;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.current-info.updating::after {
+    opacity: 1;
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.logo {
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.enter {
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    right: 25rem;
+    z-index: 1000;
+    width: 50px;
+}
+
+.admin-btn {
+    background-color: #45b7d1;
+    font: bolder 10px/1.2 small-caps cursive;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.admin-btn:hover {
+    background-color: #4534db;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 1.7rem;
+    right: 16rem;
+}
+
+.logout {
+    background-color: #f44336;
+    font: bolder 20px/1.2 small-caps cursive;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.logout:hover {
+    background-color: #8f0a00;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.admin-icon {
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 1rem;
+    right: 16rem;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    filter: invert(80%);
+}
+
+.web_txt {
+    font-size: 1rem;
+    color: #d3d3d3;
+    font-weight: bold;
+    margin: 0 auto;
+    position: absolute;
+    right: 1rem;
+    top: 1.7rem;
+}
+
+.top-logo {
+    width: 500px;
+    position: absolute;
+    left: 1rem;
+    top: -5rem;
+}
+
+/* Touch-friendly styles and scrollbar hiding - Applied to all pages */
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+html, body {
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Touch feedback for interactive elements */
+.clickable-cell, .admin-btn, .logout, .auth-btn, .modal-close, button, input, select, textarea {
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+    touch-action: manipulation;
+}
+
+.clickable-cell:active, .admin-btn:active, .logout:active, .auth-btn:active, button:active, input:active, select:active, textarea:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+/* Enhanced touch targets */
+.clickable-cell, .admin-btn, .logout, .auth-btn, button, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+}
+
+/* Virtual Keyboard Styles - Applied to all pages */
+.virtual-keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.virtual-keyboard.show {
+    transform: translateY(0);
+}
+
+.keyboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 18px 18px 0 0;
+}
+
+.keyboard-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.keyboard-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+    touch-action: manipulation;
+}
+
+.keyboard-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.keyboard-layout {
+    padding: 1rem;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.key {
+    min-width: 40px;
+    height: 50px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    color: #495057;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+    touch-action: manipulation;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.key:hover {
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.key:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.key.pressed {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: scale(0.95);
+}
+
+.shift-key {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.shift-key.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.backspace-key {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.space-key {
+    min-width: 200px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.enter-key {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+/* Responsive keyboard */
+@media (max-width: 768px) {
+    .keyboard-row {
+        gap: 0.25rem;
+    }
+
+    .key {
+        min-width: 35px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .space-key {
+        min-width: 120px;
+    }
+}
+
+/* Input field focus styles for keyboard trigger */
+input:focus, textarea:focus, [contenteditable="true"]:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Hide mobile keyboard when virtual keyboard is active */
+.virtual-keyboard.show input:focus,
+.virtual-keyboard.show textarea:focus {
+    caret-color: transparent;
+}
+
+/* Prevent zoom on double tap */
+body {
+    touch-action: manipulation;
+}
+
+/* Enhanced form elements for touch */
+input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    border-radius: 8px;
+    border: 2px solid #e1e5e9;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+/* Enhanced buttons for touch */
+button {
+    border-radius: 8px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "image": "css\/img\/kollective\/юлион.jpg",
+        "title": "Юлион",
+        "description": "Творческий коллектив для детей и подростков",
+        "created_at": "2025-09-02 17:47:00"
+    },
+    {
+        "id": 2,
+        "image": "css\/img\/kollective\/экситон.jpg",
+        "title": "Экситон",
+        "description": "Современные танцы и хореография",
+        "created_at": "2025-09-02 17:47:00"
+    },
+    {
+        "id": 3,
+        "image": "css\/img\/kollective\/энерджиМ.jpg",
+        "title": "Energy M",
+        "description": "Энергичные выступления и шоу-программы",
+        "created_at": "2025-09-02 17:47:00"
+    },
+    {
+        "id": 4,
+        "image": "css\/img\/kollective\/росток.jpg",
+        "title": "Развивающий центр РОСТОК",
+        "description": "Комплексное развитие детей",
+        "created_at": "2025-09-02 17:47:00"
+    },
+    {
+        "id": 5,
+        "image": "css\/img\/kollective\/орбита.jpg",
+        "title": "МУ ДО ДМ \"Орбита\"",
+        "description": "Музыкально-драматический театр",
+        "created_at": "2025-09-02 17:47:00"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "тест",
+        "direction": "Хореография",
+        "description": "тест",
+        "age_group": "Смешанная группа",
+        "price": "",
+        "duration": "30 минут",
+        "id": 2,
+        "created_at": "2025-07-22 12:04:54"
+    },
+    {
+        "name": "фыв",
+        "direction": "Вокал",
+        "description": "",
+        "age_group": "3-5 лет",
+        "price": "фыв",
+        "duration": "60 минут",
+        "id": 3,
+        "created_at": "2025-07-22 13:43:24"
+    }
+]
