@@ -603,7 +603,8 @@ if (isset($_GET['error'])) {
                                     <td><?php echo htmlspecialchars($item['id']); ?></td>
                                     <td>
                                         <img src="../<?php echo htmlspecialchars($item['image']); ?>"
-                                            alt="Изображение" class="carousel-image">
+                                            alt="Изображение" class="carousel-image"
+                                            onerror="this.src='../css/img/placeholder.png'">
                                     </td>
                                     <td>
                                         <div class="item-info">

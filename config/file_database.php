@@ -355,7 +355,17 @@ public function deleteGroup($id) {
             return [];
         }
         $data = file_get_contents($file);
-        return json_decode($data, true) ?: [];
+        $decoded = json_decode($data, true);
+        if ($decoded === null) {
+            return [];
+        }
+        // Stripslashes for all string values to handle escaped paths
+        array_walk_recursive($decoded, function(&$value) {
+            if (is_string($value)) {
+                $value = stripslashes($value);
+            }
+        });
+        return $decoded;
     }
 
     private function saveData($file, $data) {

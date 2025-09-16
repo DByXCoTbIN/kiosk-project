@@ -379,7 +379,7 @@ function safe_image($path)
             right: 15rem;
         }
 
-        footer {
+    footer {
     position: fixed;
     bottom: -2rem;
     left: 0;
@@ -396,6 +396,29 @@ function safe_image($path)
     border-radius: 20px 20px 0 0;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
     z-index: 9999; /* Поднимаем над всеми элементами */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #303030ff;
+    font: bold 1.2rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    filter: invert(20%);
+    flex-shrink: 0;
+}
+
+.contact-text {
+    white-space: nowrap;
 }
         /* Новые стили для небесной темы */
         * {
@@ -2132,8 +2155,6 @@ function safe_image($path)
 
 <body>
     <header>
-
-        <img src="css/img/top_logo_new.png" class="top-logo">
         <!-- Кнопка входа/выхода для админа -->
         <div class="admin-auth">
             <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
@@ -2143,7 +2164,7 @@ function safe_image($path)
                     <img src="config/img/admin_img.png" class="admin-icon">
                 </a>
             <?php endif; ?>
-            <div class="web_txt">dvorecml-podolsk.edumsko.ru</div>
+            <div class="web_txt">website.com</div>
         </div>
 
         <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] === true): ?>
@@ -2307,11 +2328,14 @@ function safe_image($path)
 </div>
 
     <footer>
-        <img src="/css/img/телефон.png" class="phone">
-
-        <div class="number">+7(4967)64-44-66</div>
-        <img src="/css/img/почта.png" class="mail">
-        <div class="mail-txt">dvorecml@yandex.ru</div>
+        <div class="contact-item">
+            <img src="/css/img/телефон.png" class="contact-icon" alt="Телефон">
+            <div class="contact-text">+7(1234)56-78-90</div>
+        </div>
+        <div class="contact-item">
+            <img src="/css/img/почта.png" class="contact-icon" alt="Почта">
+            <div class="contact-text">mail@mail.com</div>
+        </div>
     </footer>
 
     <!-- Loading Screen -->
@@ -2508,7 +2532,7 @@ function safe_image($path)
         // Функция для загрузки и отображения карусели
         async function loadCarousel() {
             try {
-                const response = await fetch('config/data/carousel.json');
+                const response = await fetch('config/data/carousel.json?v=' + Date.now());
                 const carouselData = await response.json();
                 const carouselContainer = document.getElementById('carousel-container');
 
