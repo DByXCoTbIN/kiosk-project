@@ -2302,9 +2302,7 @@ function safe_image($path)
         </div>
     </div>
 
-<div class="container-carusel" id="carousel-container">
-  <!-- Карусель будет загружена динамически через JavaScript -->
-</div>
+
 
     <footer>
         <img src="/css/img/телефон.png" class="phone">
@@ -2565,8 +2563,7 @@ function safe_image($path)
                 });
             }
 
-            // Загружаем карусель после загрузки страницы
-            loadCarousel();
+
         });
     </script>
     <script src="css/js/script.js"></script>
